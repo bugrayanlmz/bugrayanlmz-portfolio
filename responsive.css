@@ -1,0 +1,100 @@
+.githubSmall {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.githubSmall {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .project {
+    flex-direction: column;
+    margin-bottom: 200px;
+  }
+  .laptop {
+    transform: none !important;
+  }
+  .githubTitle {
+    text-align: center;
+  }
+  .saluteImgContainer {
+    height: 450px;
+  }
+  .saluteTextContainer {
+    margin-left: 80px;
+  }
+  .projectDesc {
+    font-size: 25px;
+  }
+  .projectButton {
+    font-size: 20px;
+  }
+  .githubChart {
+    display: none;
+  }
+  .githubSmall {
+    display: block;
+    margin-right: 10px;
+  }
+  .githubTitle {
+    font-size: 90px;
+  }
+  .github {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .salute {
+    display: flex;
+    flex-direction: column;
+  }
+  .saluteImgContainer {
+    margin: 0;
+  }
+  .saluteTextContainer {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .saluteText {
+    font-size: 300px;
+  }
+  .name {
+    font-size: 14vw;
+  }
+  .projects {
+    padding: 0px 30px;
+  }
+  .projectStartTitle {
+    font-size: 6vw;
+  }
+
+  .project {
+    flex-direction: column;
+    height: max-content;
+  }
+  .githubTitle {
+    font-size: 50px;
+  }
+  .githubSmall {
+    height: 400px;
+  }
+  .githubSmallImg {
+    height: 100%;
+  }
+  .github {
+    gap: 50px;
+    margin-top: 0;
+  }
+  .projectTitle {
+    font-size: 12vw;
+  }
+}

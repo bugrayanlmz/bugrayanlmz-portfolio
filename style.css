@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;700&family=Rubik:wght@300;400;500;600;700&display=swap");
+
+/* -----COLORS----- */
+
+:root {
+  --main-color: #6ea3de;
+  --background-color: #111;
+  --text-color-0: #222;
+  --text-color-1: #333;
+  --text-color-2: #444;
+  --text-color-3: #555;
+  --box-background: #171c25;
+  --main-color-2: #9fbee9;
+}
+
+/* ----- RE-SIZING ----- */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", "sans-serif";
+  background-color: var(--background-color);
+}
+
+/* ----- CONTAİNER SECTİON ----- */
+
+.container {
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+.saluteText {
+  transition: all 1s;
+  opacity: 0;
+}
+
+.saluteImg {
+  transition: all 1s;
+  opacity: 0;
+}
+
+.saluteText.show {
+  opacity: 1;
+}
+
+.saluteImg.show {
+  opacity: 1;
+}
+
+.salute {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.saluteTextContainer {
+  flex: 3;
+  margin-bottom: 30px;
+  margin-left: 50px;
+}
+.saluteImgContainer {
+  display: flex;
+
+  flex: 1;
+  height: 100vh;
+  align-items: center;
+  margin-right: 100px;
+  margin-top: 30px;
+}
+.saluteImg {
+  height: 80%;
+}
+
+.saluteText {
+  color: var(--text-color-1);
+  font-size: 50vw;
+  cursor: default;
+}
+
+.wave {
+  height: 100vh;
+  aspect-ratio: 960/540;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.layer1 {
+  background-image: url("./img/wave3.svg");
+}
+.name {
+  font-size: 18vw;
+  color: var(--text-color-1);
+  text-align: center;
+  line-height: 100vh;
+  cursor: default;
+}
+.jobTitleContainer {
+  height: 100vh;
+  background: var(--main-color-2) url(./img/bg2.png);
+  overflow: hidden;
+}
+
+.jobTitle {
+  font-size: 10vw;
+  color: var(--text-color-1);
+
+  line-height: 100vh;
+  cursor: default;
+}
+
+/* ----- PROJECTS SECTİON ----- */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20vh;
+  padding: 0px 100px;
+  overflow: hidden;
+}
+.projectStartTitle {
+  font-size: 5vw;
+  color: var(--text-color-3);
+  cursor: default;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  height: 100vh;
+}
+
+.desktop {
+  flex: 1;
+}
+
+.projectAbout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.projectTitle {
+  font-size: 7vw;
+  color: var(--text-color-2);
+  cursor: default;
+}
+.projectDesc {
+  font-size: 20px;
+  color: var(--text-color-3);
+  cursor: default;
+  text-align: justify;
+  line-height: 1.5;
+}
+.projectButton {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 3px solid var(--text-color-3);
+  color: var(--text-color-3);
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectButton::before {
+  content: "View Demo";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-color-3);
+  color: var(--text-color-0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s all;
+}
+
+.projectButton:hover.projectButton::before {
+  transform: translateX(100%);
+}
+
+.laptop {
+  width: 600px;
+  height: 379px;
+  flex: 1;
+  position: relative;
+}
+
+.laptopScreen::-webkit-scrollbar {
+  display: none;
+}
+.laptopScreen {
+  position: absolute;
+  width: 451px;
+  height: 283px;
+  top: 18px;
+  left: 68px;
+  overflow: scroll;
+}
+
+.laptopApp {
+  width: 100%;
+}
+
+/*  ----- GİTHUB SECTİON -----  */
+
+.github {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 100px;
+}
+
+.githubTitle {
+  transition: all 1.8s;
+  opacity: 0;
+}
+
+.githubChart {
+  transition: all 1.8s;
+  opacity: 0;
+}
+
+.githubTitle.hidden {
+  transform: translateX(-100%);
+}
+
+.githubChart.hidden {
+  transform: translateX(-100%);
+}
+
+.githubTitle.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.githubChart.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.githubTitle {
+  font-size: 100px;
+  color: var(--text-color-2);
+  font-family: inherit;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.githubFirstTitle {
+  cursor: default;
+}
+
+.dates {
+  font-size: 12px;
+  color: var(--text-color-3);
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.githubChart {
+  width: 820px;
+  text-align: center;
+}
+
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.box {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  background-color: var(--box-background);
+  cursor: pointer;
+  transition: 3s all ease;
+}
+
+.active:nth-child(4n) {
+  background-color: #195b2c;
+}
+
+.githubChart:hover .active:nth-child(2n + 1) {
+  background-color: #195b2c;
+}
+
+.githubChart:hover .active:nth-child(2n) {
+  background-color: #063f24;
+}
+
+.contactContainer {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contactTitle {
+  font-size: 50px;
+  color: var(--text-color-2);
+}
+
+.contactImage {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+.contactImage:hover {
+  transform: translateY(-5px);
+}
